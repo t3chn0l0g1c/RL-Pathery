@@ -79,15 +79,6 @@ public class A3CPathery {
         return new A3CDiscreteDense<PatheryState>(mdp, CARTPOLE_NET_A3C, CARTPOLE_A3C);
     }
 
-//    private static GymEnv defineMdp() {
-//        GymEnv mdp = null;
-//        try {
-//        mdp = new GymEnv("CartPole-v0", false, false);
-//        } catch (RuntimeException e){
-//            System.out.print("To run this example, download and start the gym-http-api repo found at https://github.com/openai/gym-http-api.");
-//        }
-//        return mdp;
-//    }
 
     private static DataManager recordTraining() throws IOException {
         return new DataManager(true);

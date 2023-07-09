@@ -90,13 +90,9 @@ public class Q_Pathery {
 
     public static void simpleStock() throws IOException {
 
-//        DataManager manager = getDataManager();
-
         Pathery mdp = new Pathery(3);
 
         Learning<PatheryState, Integer, DiscreteSpace, IDQN> dql = new QLearningDiscreteDense<PatheryState>(mdp, STOCK_NET, STOCK_QL);
-
-//        mdp.setFetchable(dql);
 
         dql.train();
 
@@ -104,9 +100,6 @@ public class Q_Pathery {
 
     }
 
-//    private static SimpleToy createStockAbstraction() {
-//        return new SimpleToy(20);
-//    }
 
     private static DataManager getDataManager() throws IOException {
         return new DataManager();
@@ -120,8 +113,6 @@ public class Q_Pathery {
         Pathery mdp = new Pathery(2);
 
         AsyncNStepQLearningDiscreteDense<PatheryState> dql = new AsyncNStepQLearningDiscreteDense<PatheryState>(mdp, STOCK_NET, STOCK_ASYNC_MULTI_THREAD_QL);
-
-//        mdp.setFetchable(dql);
 
         dql.train();
 

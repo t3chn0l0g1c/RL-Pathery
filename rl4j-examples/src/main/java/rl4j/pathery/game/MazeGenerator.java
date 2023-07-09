@@ -9,8 +9,6 @@ import rl4j.pathery.game.util.MazeDescriptor;
 import rl4j.pathery.game.util.TileType;
 
 public class MazeGenerator {
-	// output is byte[] or bmp?
-	// 1px resolution (1px for blockCount)
 	
 	static int id;
 	
